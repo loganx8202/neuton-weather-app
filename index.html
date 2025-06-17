@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🌤 Neuton Weather App</title>
+  <link href="./src/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black text-white font-sans min-h-screen flex flex-col items-center px-4 py-6">
+  <!-- Header -->
+  <h1 class="text-2xl sm:text-3xl font-semibold my-4 text-center flex items-center justify-center gap-2">
+    <img src="https://cdn-icons-png.flaticon.com/512/2698/2698250.png" alt="sun icon" style="width: 32px;" />
+    Neuton Weather App
+  </h1>
+
+  <!-- Search UI -->
+  <div class="relative w-full max-w-sm sm:max-w-md">
+    <input 
+      id="cityInput" 
+      type="text" 
+      placeholder="Search city" 
+      class="w-full px-4 py-3 rounded-full border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 transition" 
+      oninput="suggestCities()" />
+      
+    <ul id="suggestionList" class="absolute w-full mt-1 bg-white rounded-xl shadow-lg border border-gray-200 hidden z-10"></ul>
+
+    <div class="flex flex-col sm:flex-row gap-2 mt-4">
+      <button onclick="searchWeather()" class="w-full bg-blue-600 text-white py-2 rounded-full shadow-md hover:bg-blue-700 transition">
+        Get Weather
+      </button>
+      <button onclick="getWeatherByLocation()" class="w-full bg-gray-200 text-gray-800 py-2 rounded-full shadow-md hover:bg-gray-300 transition">
+        Current Location
+      </button>
+    </div>
+  </div>
+
+  <!-- Recent Search Dropdown -->
+  <select id="recentSearches" onchange="handleRecentSearch(this)" class="mt-4 w-full max-w-sm sm:max-w-md p-2 rounded-lg border border-gray-300 shadow-sm">
+    <option value="">Select recent city</option>
+  </select>
+
+  <!-- Weather Result -->
+  <div id="weatherResult" class="w-full max-w-sm sm:max-w-md mt-6 p-4 bg-white rounded-2xl shadow-md hidden">
+    <h2 id="cityName" class="text-xl font-semibold text-center mb-4">Your Location</h2>
+    <div id="forecast" class="grid grid-cols-2 sm:grid-cols-3 gap-4"></div>
+  </div>
+
+  <!-- Weather Details Modal -->
+  <div id="weatherModal" class="modal hidden">
+    <div class="modal-content">
+      <span id="modalClose" class="close">&times;</span>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+</body>
+
+<script src="script.js"></script>
+</html>

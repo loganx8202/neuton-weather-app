@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #0f0f0f;
+  color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  background-image:
+    url('https://cdn-icons-png.flaticon.com/512/2926/2926754.png'),
+    url('https://cdn-icons-png.flaticon.com/512/2926/2926754.png'),
+    url('https://cdn-icons-png.flaticon.com/512/2926/2926754.png'),
+    url('https://cdn-icons-png.flaticon.com/512/2926/2926754.png'),
+    url('https://cdn-icons-png.flaticon.com/512/2926/2926754.png'),
+    url('https://cdn-icons-png.flaticon.com/512/2926/2926754.png'),
+    url('https://cdn-icons-png.flaticon.com/512/2926/2926754.png'),
+    url('https://cdn-icons-png.flaticon.com/512/2926/2926754.png'),
+    url('https://cdn-icons-png.flaticon.com/512/2926/2926754.png'),
+    url('https://cdn-icons-png.flaticon.com/512/2926/2926754.png'),
+    url('https://cdn-icons-png.flaticon.com/512/2926/2926754.png'),
+    url('https://cdn-icons-png.flaticon.com/512/2926/2926754.png'),
+    url('https://cdn-icons-png.flaticon.com/512/2926/2926754.png'),
+    url('https://cdn-icons-png.flaticon.com/512/2926/2926754.png'),
+    url('https://cdn-icons-png.flaticon.com/512/2926/2926754.png'),
+    url('https://cdn-icons-png.flaticon.com/512/2926/2926754.png'),
+    url('https://cdn-icons-png.flaticon.com/512/2926/2926754.png'),
+    url('https://cdn-icons-png.flaticon.com/512/2926/2926754.png'),
+    url('https://cdn-icons-png.flaticon.com/512/2926/2926754.png'),
+    url('https://cdn-icons-png.flaticon.com/512/2926/2926754.png'),
+    url('https://cdn-icons-png.flaticon.com/512/149/149488.png'),
+    url('https://cdn-icons-png.flaticon.com/512/149/149488.png'),
+    url('https://cdn-icons-png.flaticon.com/512/149/149488.png'),
+    url('https://cdn-icons-png.flaticon.com/512/149/149488.png'),
+    url('https://cdn-icons-png.flaticon.com/512/149/149488.png'),
+    url('https://cdn-icons-png.flaticon.com/512/149/149488.png'),
+    url('https://cdn-icons-png.flaticon.com/512/149/149488.png'),
+    url('https://cdn-icons-png.flaticon.com/512/149/149488.png'),
+    url('https://cdn-icons-png.flaticon.com/512/149/149488.png'),
+    url('https://cdn-icons-png.flaticon.com/512/149/149488.png');
+  background-repeat: no-repeat;
+  background-size: 100px;
+  background-position:
+    5% 10%, 15% 70%, 30% 25%, 50% 80%, 65% 40%, 75% 15%, 85% 65%, 95% 30%,
+    10% 50%, 20% 20%, 35% 90%, 40% 40%, 55% 60%, 60% 10%, 70% 70%, 80% 20%,
+    25% 35%, 45% 75%, 60% 55%, 73% 25%,
+    12% 22%, 28% 35%, 45% 18%, 58% 44%, 72% 10%, 84% 55%, 65% 72%, 38% 67%, 91% 12%, 10% 88%;
+  opacity: 0.07;
+  transform: rotateZ(-5deg);
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  width: 50%;
+  min-width: 320px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 16px;
+}
+
+h1, h2 {
+  color: #2c91fc;
+  text-align: center;
+  font-weight: 700;
+}
+
+input {
+  padding: 10px 16px;
+  border: 2px solid #facc15;
+  border-radius: 9999px;
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+}
+
+#suggestionList {
+  background-color: #1a1a1a;
+  color: #90ee90;
+  border: 1px solid #facc15;
+  border-radius: 12px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+#suggestionList li {
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#suggestionList li:hover {
+  background-color: #2c91fc;
+  color: white;
+}
+
+select {
+  padding: 10px;
+  border-radius: 9999px;
+  border: 2px solid #facc15;
+  background-color: #1a1a1a;
+  color: #90ee90;
+  font-size: 14px;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+button {
+  background-color: #FFD700;
+  color: #111;
+  font-weight: bold;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #facc15;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+#forecast {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.weather-card {
+  background-color: #1f1f1f;
+  padding: 16px;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.weather-card p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #f0f0f0;
+}
+
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #1f1f1f;
+  color: #f0f0f0;
+  padding: 24px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  position: relative;
+  animation: fadeIn 0.3s ease;
+}
+
+.close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #f0f0f0;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.dropdown-animate {
+  animation: fadeIn 0.2s ease-in-out;
+}
